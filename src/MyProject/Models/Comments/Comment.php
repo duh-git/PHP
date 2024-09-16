@@ -27,6 +27,10 @@ class Comment extends ActiveRecordEntity
       return $this->createdAt;
     }
     
+    public function getArticle(): string
+    {
+      return $this->articleId;
+    }
 
     protected static function getTableName(): string
     {

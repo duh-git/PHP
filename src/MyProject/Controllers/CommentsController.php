@@ -3,17 +3,9 @@
 namespace MyProject\Controllers;
 
 use MyProject\Models\Comments\Comment;
-use MyProject\View\View;
 
-class CommentsController
+class CommentsController extends AbstractController
 {
-    private $view;
-
-    public function __construct()
-    {
-        $this->view = new View(__DIR__ . '/../../../templates');
-    }
-
     public function loadComments(int $articleId)
     {
         $comments = Comment::getComments($articleId);

@@ -12,7 +12,7 @@
     <table class="layout">
         <tr>
             <td colspan="2" class="header">
-                Мой блог
+                <?= !empty($user) ? 'Привет, ' . $user->getNickname() : 'Войдите на сайт' ?>
             </td>
         </tr>
         <tr>
